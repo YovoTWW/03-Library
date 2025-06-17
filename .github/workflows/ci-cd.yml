@@ -14,11 +14,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - name : Checkout the Repository
       uses: actions/checkout@v4
@@ -29,6 +24,8 @@ jobs:
         cache: 'npm'
     - name : Install Dependencies
       run : npm install
+    - name : Install Playwright Browsers
+      run : npm playwright install
     - name: Start server
       run : npm run server
     - name: Start Front End
