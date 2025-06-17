@@ -27,9 +27,9 @@ jobs:
     - name : Install Playwright Browsers
       run : npx playwright install
     - name: Start server
-      run : npm run server
+      run : npm run server &
     - name: Start Front End
       run : npm run start &
     - name: Start Tests
-      run : npm run test &
+      run : npm run test 
    
