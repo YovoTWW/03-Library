@@ -25,7 +25,7 @@ jobs:
     - name : Install Dependencies
       run : npm install
     - name : Install Playwright Browsers
-      run : npm playwright install
+      run : npx playwright install
     - name: Start server
       run : npm run server
     - name: Start Front End
